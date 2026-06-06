@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Vampire Girl 🌸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background */
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#1e293b,#020617);
+z-index:-2;
+}
+
+/* Stars */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+50%{
+opacity:.3;
+}
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+opacity:.9;
+max-width:300px;
+}
+
+.scroll{
+margin-top:40px;
+font-size:30px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(10px);
+}
+}
+
+/* Sections */
+
+.section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+}
+
+.photo{
+width:85%;
+max-width:350px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.25);
+margin-bottom:25px;
+}
+
+.quote{
+font-size:22px;
+max-width:350px;
+line-height:1.7;
+}
+
+/* Glass Card */
+
+.glass{
+width:90%;
+max-width:380px;
+padding:25px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(10px);
+border-radius:25px;
+border:1px solid rgba(255,255,255,.2);
+}
+
+.glass h2{
+margin-bottom:15px;
+}
+
+.glass p{
+line-height:1.8;
+}
+
+/* Envelope */
+
+.envelope-section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.envelope{
+font-size:120px;
+cursor:pointer;
+transition:.5s;
+}
+
+.envelope:hover{
+transform:scale(1.05);
+}
+
+.letter{
+display:none;
+margin-top:20px;
+width:90%;
+max-width:380px;
+padding:25px;
+border-radius:25px;
+background:white;
+color:#111;
+line-height:1.8;
+text-align:left;
+}
+
+/* Hearts */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:floatUp 6s linear forwards;
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<section class="hero">
+
+<h1>Hey Vampire Girl 😌🌸</h1>
+
+<p>
+I wanted to show you something...
+</p>
+
+<div class="scroll">
+⬇️
+</div>
+
+</section>
+
+<section class="section">
+
+<img src="SA1.png" class="photo">
+
+<div class="quote">
+Some people appear unexpectedly...
+✨
+</div>
+
+</section>
+
+<section class="section">
+
+<img src="SA2.png" class="photo">
+
+<div class="quote">
+...and somehow become part of our daily routine 🌸
+</div>
+
+</section>
+
+<section class="section">
+
+<img src="SA3.png" class="photo">
+
+<div class="quote">
+The random talks...
+The laughs...
+The funny moments...
+🖤
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="glass">
+
+<h2>For Chikki 🌸</h2>
+
+<p>
+
+Thank you for the smiles...
+
+Thank you for the conversations...
+
+Thank you for being uniquely you.
+
+✨
+
+</p>
+
+</div>
+
+</section>
+
+<section class="envelope-section">
+
+<div class="envelope" onclick="openLetter()">
+💌
+</div>
+
+<div class="letter" id="letter">
+
+<h3>Sana 🌸</h3>
+
+<p>
+
+Keep smiling, Vampire Girl 😌
+
+Take care of your health 🖤
+
+And thank you for all the memories and laughs.
+
+✨🌸🤍
+
+— Harry
+
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+/* Stars */
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement('div');
+
+star.className='star';
+
+star.style.left=Math.random()*100+'%';
+
+star.style.top=Math.random()*100+'%';
+
+star.style.opacity=Math.random();
+
+document.getElementById('stars').appendChild(star);
+
+}
+
+/* Hearts */
+
+setInterval(()=>{
+
+let heart=document.createElement('div');
+
+heart.className='heart';
+
+heart.innerHTML='❤️';
+
+heart.style.left=Math.random()*100+'vw';
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),6000);
+
+},1200);
+
+/* Letter */
+
+function openLetter(){
+
+document.getElementById('letter').style.display='block';
+
+}
+
+</script>
+
+</body>
+</html>
