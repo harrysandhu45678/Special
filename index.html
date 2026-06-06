@@ -206,6 +206,10 @@ opacity:0;
 
 <body>
 
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  
 <div class="stars" id="stars"></div>
 
 <section class="hero">
@@ -216,6 +220,19 @@ opacity:0;
 I wanted to show you something...
 </p>
 
+<button onclick="playMusic()"
+style="
+margin-top:20px;
+padding:12px 24px;
+border:none;
+border-radius:30px;
+background:white;
+color:black;
+font-weight:bold;
+cursor:pointer;">
+🎵 Play Music
+  </button>
+  
 <div class="scroll">
 ⬇️
 </div>
@@ -344,6 +361,14 @@ setTimeout(()=>heart.remove(),6000);
 
 },1200);
 
+  function playMusic(){
+
+let music = document.getElementById("bgMusic");
+
+music.play();
+
+  }
+  
 /* Letter */
 
 function openLetter(){
